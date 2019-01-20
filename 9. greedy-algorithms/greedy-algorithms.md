@@ -4,7 +4,7 @@
 
 - Greedy algorithm'in olayı, her adımda mümkün olan en optimum davranışı seçmek ve bu şekilde sonuca ulaşmaktır. Peki neden greedy, yani aç gözlü deniyor? Şu şekle bakalım:
 
-![greedy-algorithms](images/greedy-algorithms.png)
+  ![greedy-algorithms](images/greedy-algorithms.png)
 
 Bu şekilde bizden 'en büyük toplama' ulaşacağımız yolu bulmamız isteniyor. Greedy algorithm'i takip edersek ilk iterasyonda seçeceğimiz rakam 7 olacak. Daha sonra ikinci iterasyonda seçeceğimiz rakam ise 11 olacak. Dolayısıyla toplam 3 + 7 + 11 = 21 olacak. Oysa ki ilk başta 4, daha sonra ise 20 seçseydik toplam 3 + 4 + 20 = 27 olacaktı. Ancak biz açgözlülük yapıp ilk gördüğümüz büyük sayıya atladık. Bu yüzden bu algoritmanın adı 'greedy'.
 
@@ -12,25 +12,25 @@ Greedy algoritmalarla ilgili ikinci önemli konu ise her bir adımda yeni bir ka
 
 ### The classroom scheduling problem
 
-Suppose you have a classroom and want to hold as many classes here as possible. You get a list of classes.
+- Suppose you have a classroom and want to hold as many classes here as possible. You get a list of classes.
 
-![classroom-schedule](images/classroom-schedule.png)
+  ![classroom-schedule](images/classroom-schedule.png)
 
-You want to hold as many classes as possible in this classroom. How do you pick what set of classes to hold, so that you get the biggest set of classes possible?
+- You want to hold as many classes as possible in this classroom. How do you pick what set of classes to hold, so that you get the biggest set of classes possible?
 
-Sounds like a hard problem, right? Actually, the algorithm is so easy, it might surprise you. Here's how it works:
+- Sounds like a hard problem, right? Actually, the algorithm is so easy, it might surprise you. Here's how it works:
 
-1. Pick the class that ends the soonest.  This is the first class you'll hold in this classroom.
-2. Now, you have to pick a class that starts after the first class. Again, pick the class that ends the soonest. This is the second class you'll hold.
+  1. Pick the class that ends the soonest.  This is the first class you'll hold in this classroom.
+  2. Now, you have to pick a class that starts after the first class. Again, pick the class that ends the soonest. This is the second class you'll hold.
 
 ### The knapsack problem
 
-Suppose you''re a greedy thief. You''re in a store with a knapsack, and there are all these items you can steal. But you can only take what you can fit in your knapsack. The knapsack can hold 35 pounds.
+- Suppose you're a greedy thief. You're in a store with a knapsack, and there are all these items you can steal. But you can only take what you can fit in your knapsack. The knapsack can hold 35 pounds.
 
-You're trying to maximize the value of the items you put in your knapsack. What algorithm do you use? Again, the greedy strategy is pretty simple:
+- You're trying to maximize the value of the items you put in your knapsack. What algorithm do you use? Again, the greedy strategy is pretty simple:
 
-1. Pick the most expensive thing that will fit in your knapsack.
-2. Pick the next most expensive thing that will fit in your knapsack. And so on.
+  1. Pick the most expensive thing that will fit in your knapsack.
+  2. Pick the next most expensive thing that will fit in your knapsack. And so on.
 
 ![knapsack](images/knapsack.png)
 
@@ -42,7 +42,7 @@ Here's the takeaway from this second example: sometimes, perfect is the enemy of
 
 ### The set-covering problem
 
-This is an example where greedy algorithms are absolutely necessary.
+- This is an example where greedy algorithms are absolutely necessary.
 
 Suppose you're starting a radio show. You want to reach listeners in all 50 states. You have to decide what stations to play on to reach all those listeners. It costs money to be on each station, so you're trying to minimize the number of stations you play on. You have a list of stations. Each station covers a region, and there's overlap.
 
@@ -53,7 +53,7 @@ How do you  gure out the smallest set of stations you can play on to cover all 5
 
 1. List every possible subset of stations. This is called the power set. There are `2^n` possible subsets. For example we have Station 1, Station 2, Station 3 and Station 4. We can make 16 different combinations:
 
-		0, 1, 2, 3, 4, 12, 13, 14, 23, 24, 34, 123, 124, 134, 234, 1234
+    `0, 1, 2, 3, 4, 12, 13, 14, 23, 24, 34, 123, 124, 134, 234, 1234`
 
 2. From these, pick the set with the smallest number of stations that covers all 50 states.
 

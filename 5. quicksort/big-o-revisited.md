@@ -1,27 +1,27 @@
 ## Big-o-revisited
 
-- Quicksort is unique because its speed depends of the pivot you choose.
+- Quicksort is unique because its speed depends on the pivot you choose.
 
-- Here are most common Big-o times:
+- Here are most the common Big-o times:
 
-![big-o-runtimes](images/big-o-runtimes.png)
+  ![big-o-runtimes](images/big-o-runtimes.png)
 
 - There is another sorting algorithm called **merge sort**, which is O(n logn). **Quicksort** is a tricky case. In the worst case, quicksort takes O(n<sup>2</sup>) time. It's as slow as **selection sort**. But that's the worst case. In the average case, quicksort takes **O(n logn)** time.
 
 - You might be wondering:
 
-1. What do worst case and avarage case mean here?
-1. If quicksort is O(n log n) on avarage, but merge sort is O(n logn) always, why not use merge sort? Isn't it faster?
+  1. What do worst case and avarage case mean here?
+  1. If quicksort is O(n log n) on avarage, but merge sort is O(n logn) always, why not use merge sort? Isn't it faster?
 
 - We omit constants when stating the big-o, but sometimes the constant can make a difference. Quicksort versus merge sort is one example. Quicksort has a smaller constant than merge sort. So if they are both O(n logn) time, quicksort is faster. And quicksort is faster in practice because it hits the average case way more often than the worst case.
 
 - The worst case for quicksort is trying to sort an array that is already sorted. In other words if our pivot is the biggest or smallest number in the array, then we hit the worst case (to prevent this, we can pick two random items from the array and take their medium):
 
-![pivot-first](images/pivot-first.png)
+  ![pivot-first](images/pivot-first.png)
 
 - If we pick the middle element as the pivot:
 
-![pivot-middle](images/pivot-middle.png)
+  ![pivot-middle](images/pivot-middle.png)
 
 - The first example we saw is the worst-case scenario, and the second example is the best-case scenario. In the worst scenario, the stack size is O(n). In the best case, the stack size is O(log n).
 
@@ -35,7 +35,7 @@ Even if you partition the array differently, you’re still touching O(n) elemen
 
 ![n-logn2](images/n-logn2.png)
 
-- In this example, there are O(log n) levels (the technical way to say that is, "The height of the call stack is O(log n)"). And each level takes O(n) time. The entire algorithm will take O(n) * O(log n) = O(n log n) time. This is the best-case scenario. In the worst case, there are O(n) levels, so the algorithm will take O(n) * O(n) = O(n<sup>2</sup>) time.
+- In this example, there are `O(log n)` levels (the technical way to say that is, "The height of the call stack is `O(log n)`"), and each level takes `O(n)` time. The entire algorithm will take `O(n) * O(log n) = O(n log n)` time. This is the best-case scenario. In the worst case, there are `O(n)` levels, so the algorithm will take O(n) * O(n) = O(n<sup>2</sup>) time.
 
 - Quicksort is one of the fastest sorting algorithms out here and it's a very good example of D&C.
 

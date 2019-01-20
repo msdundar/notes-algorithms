@@ -4,13 +4,13 @@
 
 - Simple search needs to check each element, so it will take **n** operations. The run tme in Big O notation is **O(n)**.
 
-- Binary search needs log n operations to check a list of size n. Running time in Big O notation is **O(log n)**.
+- Binary search needs **log(n)** operations to check a list of size n. Running time in Big O notation is **O(log n)**.
 
 - Big O will not tell you anything about how long it will take, it will only tell you how fast the algorithm grows.
 
-- Big O her zaman en kötü olasılığı ifade eder. Bir simple search yaparken ilk denememizde de aradığımız şeyi bulabiliriz, ama bu big-o'nun ilgilendiği bir şey değil. Big-o her zaman en kötü olasılıkla ilgileniyor.
+- Big O always considers the worst case. If we are lucky, we can find the value that we are searching for even in the first try, but Big(O) always considers the worst case. Omega(n) considers the best case, and Theta(n) considers the avarage case.
 
-![big-o-notation](images/big-o-notation.png)
+  ![big-o-notation](images/big-o-notation.png)
 
 ## Some Common Big O Run Times
 
@@ -30,7 +30,3 @@
 ## Pigeon and Internet Example
 
 ![pigeon-versus-internet](images/pigeon-versus-internet.png)
-
-## Theta and Omega
-
-![omage-theta](images/omage-theta.png)

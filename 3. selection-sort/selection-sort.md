@@ -3,7 +3,7 @@
 ![selection-sort](images/selection-sort.png)
 
 - Selection sort takes O(n<sup>2</sup>) time.
-- Aslında n*(n+1)/2 ama biz sabitlerle ilgilenmediğimiz için **n<sup>2</sup>**
+- It actually takes n*(n+1)/2 time (n<sup>2</sup>+n / 2), however since we don't care about constants, it is **n<sup>2</sup>**
 
 ![selection-sort-time](images/selection-sort-time.png)
 

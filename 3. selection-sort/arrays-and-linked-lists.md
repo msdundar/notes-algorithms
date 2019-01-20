@@ -1,10 +1,10 @@
 ## Arrays and Linked Lists
 
-- Array için tüm array'in sığabileceği bir memory bloğuna ihtiyacımız var. Yani array'in tümü bir memory bloğunda tutulacak, bir kısmı bir bellek adresinde - diğer kısmı başka bir bellek adresinde tutulmayacak. Linked list'te ise her bir eleman belleğin farklı yerlerinde tutulabilir, her bir eleman ise kendisinden sonra gelen elemanın konumunu bilir (poiter).
+- Array için tüm array'in sığabileceği bir memory bloğuna ihtiyacımız var. Yani array'in tümü bir memory bloğunda tutulacak, bir kısmı bir bellek adresinde - diğer kısmı başka bir bellek adresinde tutulmayacak. Linked list'te ise her bir eleman belleğin farklı yerlerinde tutulabilir, her bir eleman ise kendisinden sonra gelen elemanın konumunu bilir (pointer).
 
 - Bu aynı sinemaya arkadaş grubu olarak gitmek gibi. Array'i ele alacak olursak tüm arkadaşlar yanyana oturmak istiyor, linked list'i ele alırsak arkadaşlar ayrı ayrı oturmayı kabul ediyor ve herkes kendinden sonra kimin geldiğini biliyor diyebiliriz.
 
-- Bu yüzden de array'e yeni eleman eklemek ve array'den eleman çıkarmak bir sorun. Her bir ekleme çıkarma işleminde yine uygun bir bellek alanı bulunması gerekiyor. Yine sinemadan örnek verirsek, salonun A sırasında 7 tane yanyana boş koltuk var ancak bir arkadaşımız daha bize katıldı - dolayısıyla artık 8 tane yanyana boş koltuğa ihtiyacımız oldu ve bunun D sırasında bularak hepimiz oraya geçtik.
+- Bu yüzden de array'e yeni eleman eklemek ve array'den eleman çıkarmak bir sorun. Her bir ekleme çıkarma işleminde yine uygun bir bellek alanı bulunması gerekiyor. Yine sinemadan örnek verirsek, salonun A sırasında 7 tane yanyana boş koltuk var ancak bir arkadaşımız daha bize katıldı - dolayısıyla artık 8 tane yanyana boş koltuğa ihtiyacımız oldu ve bunun D sırasında bulursak hepimiz oraya geçmek zorundayız.
 
 - Buna çözüm olarak koltuk tutmayı önerebiliriz. Örneğin 7 kişi olsakta 10 tane yanyana koltuğu satın almak gibi. Peki bunun dezavantajı nedir? Eğer başka arkadaş gelmezse 3 koltuk boşa gitmiş olacak (memory waste).
 
@@ -20,12 +20,12 @@
 
 - Here are run times for common operations on arrays and lists:
 
-![run-time](images/run-time.png)
+  ![run-time](images/run-time.png)
 
-```
-O(n) -> Linear time
-O(1) -Z Constant time
-```
+  ```
+  O(n) -> Linear time
+  O(1) -Z Constant time
+  ```
 
 ## Inserting into the middle of a list
 
@@ -39,7 +39,7 @@ O(1) -Z Constant time
 
 - Here are the run times for common operations on arrays and linked lists:
 
-![run-time-2](images/run-time-2.png)
+  ![run-time-2](images/run-time-2.png)
 
 - Which are used more? Arrays or lists? Arrays see a lot of use because they allow random access. There are two types of access: **random access** and **sequential access**.
 
@@ -51,7 +51,7 @@ O(1) -Z Constant time
 
 - Facebook uses neither an array nor a linked list to store user information. Let’s consider a hybrid data structure: an array of linked lists. You have an array with 26 slots. Each slot points to a linked list. For example, the first slot in the array points to a linked list containing all the usernames starting with a. The second slot points to a linked list containing all the usernames starting with b, and so on.
 
-![facebook-excersise](images/facebook-excersise.png)
+  ![facebook-excersise](images/facebook-excersise.png)
 
 - Question: Suppose Adit B signs up for Facebook, and you want to add them to the list. You go to slot 1 in the array, go to the linked list for slot 1, and add Adit B at the end. Now, suppose you want to search for Zakhir H. You go to slot 26, which points to a linked list of all the Z names. Then you search through that list to find Zakhir H. Compare this hybrid data structure to arrays and linked lists. Is it slower or faster than each for searching and inserting? You don’t have to give Big O run times, just whether the new data structure would be faster or slower.
 
@@ -65,6 +65,6 @@ O(1) -Z Constant time
 - Linked list'in ortasına bir eleman eklediğimizde bir tane link'i kırmamız, iki tane yeni link oluşturmamız yeterli. Array'de ise epeyce bir elemanı kaydırmamız gerekecek.
 - Doubly linked lists have two different pointers to forward and backward:
 
-![singly-linked-lists](images/singly-linked-lists.png)
+  ![singly-linked-lists](images/singly-linked-lists.png)
 
-![doubly-linked-lists](images/doubly-linked-lists.png)
+  ![doubly-linked-lists](images/doubly-linked-lists.png)

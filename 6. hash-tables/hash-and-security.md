@@ -33,17 +33,17 @@
 
 - Bcrypt şöyle çalışıyor:
 
-```ruby
-hash(salt + just_entered_password)
-```
+    ```ruby
+    hash(salt + just_entered_password)
+    ```
 
 - Örneğin ruby bcrypt hashing mekanızmasını kullanıyor. Bu MD5’e çok daha yavaş çalışmak üzere **hazırlanmış** bir algoritma. Avantajı ise: MD5’ı kırmaya çalışan bir saldırgan saniyede 150.000 şifreyi test edebilirken, bcrypt kullanarak şifre kırmaya çalışırsa saniyede sadece 500 şifre deneyebilecek. Ayrıca saldırganların bcrypt için rainbow table oluşturması gereken süre göz önünde bulundurulursa - mümkün değil.
 
-Peki bcrypt salt’ı random oluşturuyorsa şifreler nasıl kıyaslanıyor login esnasında? Yani random bir şeyi tekrar üretemeyiz sonuçta?
+- Peki bcrypt salt’ı random oluşturuyorsa şifreler nasıl kıyaslanıyor login esnasında? Yani random bir şeyi tekrar üretemeyiz sonuçta?
 
 - BCrypt defines its own == method, which knows how to extract that “salt” value so that it can take that into account when comparing the passwords. Bcrypt is not an encryption algorithm, it is a hash algorithm. You cannot reverse a hash (1000 ve 100’ün mod’unun aynı şey olması örneği gibi). It is provably impossible.
 
-![bcrypt](images/bcrypt.png)
+  ![bcrypt](images/bcrypt.png)
 
 - Bcrypt random oluşturduğu salt’ı hash’in içine koyuyor. Yani salt’ı store etmemize gerek yok. Brcryp’in check yapan fonksiyonu salt’ı hash içerisinden nasıl çıkartacağını bildiği için bizim salt’ları store etmemize gerek yok.
 

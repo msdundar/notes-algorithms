@@ -4,26 +4,26 @@
 
 - The Queue class is used to synchronize communication between threads. You would use this if you were doing something with concurrency.
 
-```ruby
-require 'thread'
-queue = Queue.new
+  ```ruby
+  require 'thread'
+  queue = Queue.new
 
-producer = Thread.new do
-  5.times do |i|
-    sleep rand(i) # simulate expense
-    queue << i
-    puts "#{i} produced"
+  producer = Thread.new do
+    5.times do |i|
+      sleep rand(i) # simulate expense
+      queue << i
+      puts "#{i} produced"
+    end
   end
-end
 
-consumer = Thread.new do
-  5.times do |i|
-    value = queue.shift
-    sleep rand(i/2) # simulate expense
-    puts "consumed #{value}"
+  consumer = Thread.new do
+    5.times do |i|
+      value = queue.shift
+      sleep rand(i/2) # simulate expense
+      puts "consumed #{value}"
+    end
   end
-end
-```
+  ```
 
 ## Methods
 

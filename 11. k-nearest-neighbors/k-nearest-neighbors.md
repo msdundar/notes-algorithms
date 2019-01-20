@@ -4,33 +4,31 @@
 
 - Örneğin portakal mı yoksa greyfurt mu olduğunu bilmediğimiz bir meyvemiz var, bunun durumuna ve ona yakın komşulara bakarak ne olduğunu anlamaya çalışırız.
 
-![fruit](images/fruit.png)
+  ![fruit](images/fruit.png)
 
-More neighbors are oranges than grapefruit. So this fruit is probably an orange. Congratulations: You just used the k-nearest neighbors (KNN) algorithm for classification! The whole algorithm is pretty simple.
+- More neighbors are oranges than grapefruit. So this fruit is probably an orange. Congratulations: You just used the k-nearest neighbors (KNN) algorithm for classification! The whole algorithm is pretty simple.
 
-![k-nearest-neighbors](images/k-nearest-neighbors.png)
+  ![k-nearest-neighbors](images/k-nearest-neighbors.png)
 
 But there's still a big piece missing. You graphed the fruits by similarity. How do you figure out how similar two fruits are?
 
 ### Feature extraction
 
-In the grapefruit example, you compared fruit based on how big they are and how red they are. Size and color are the features you're comparing.
+- In the grapefruit example, you compared fruit based on how big they are and how red they are. Size and color are the features you're comparing.
 
-![feature-extract](images/feature-extract.png)
+  ![feature-extract](images/feature-extract.png)
 
-From the graph, you can tell visually that fruits A and B are similar. Let's measure how close they are. To find the distance between two points, you use the Pythagorean formula.
+- From the graph, you can tell visually that fruits A and B are similar. Let's measure how close they are. To find the distance between two points, you use the Pythagorean formula.
 
-![pythagorean-formula](images/pythagorean-formula.png)
+  ![pythagorean-formula](images/pythagorean-formula.png)
 
-For Netflix situation, once you can graph users, you can measure the distance between them.
+- For Netflix situation, once you can graph users, you can measure the distance between them. Here's how you can convert users into a set of numbers. When users sign up for Netflix, have them rate some categories of movies based on how much they like those categories. For each user, you now have a set of ratings!
 
-Here's how you can convert users into a set of numbers. When users sign up for Netflix, have them rate some categories of movies based on how much they like those categories. For each user, you now have a set of ratings!
+  ![netflix](images/netflix.png)
 
-![netflix](images/netflix.png)
+- Remember how in oranges versus grapefruit, each fruit was represented by a set of two numbers? Here, each user is represented by a set of five numbers. A mathematician would say, instead of calculating the distance in two dimensions, you're now calculating the distance in five dimensions. But the distance formula remains the same.
 
-Remember how in oranges versus grapefruit, each fruit was represented by a set of two numbers? Here, each user is represented by a set of five numbers. A mathematician would say, instead of calculating the distance in two dimensions, you're now calculating the distance in five dimensions. But the distance formula remains the same.
-
-![pythagorean-formula-2](images/pythagorean-formula-2.png)
+  ![pythagorean-formula-2](images/pythagorean-formula-2.png)
 
 The distance tells you how similar those sets of numbers are.
 
