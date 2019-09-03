@@ -8,7 +8,7 @@
 
 - Big O will not tell you anything about how long it will take, it will only tell you how fast the algorithm grows.
 
-- Big O always considers the worst case. If we are lucky, we can find the value that we are searching for even in the first try, but Big(O) always considers the worst case. Omega(n) considers the best case, and Theta(n) considers the avarage case.
+- Big O always considers the worst case. If we are lucky, we can find the value that we are searching for even in the first try, but Big(O) always considers the worst case. Omega(n) considers the best case, and Theta(n) considers the average case.
 
   ![big-o-notation](images/big-o-notation.png)
 
@@ -18,7 +18,7 @@
 - O(n), also known as linear time. Simple search.
 - O(n * log<sub>n</sub>). A fast sorting algorithm like quicksort.
 - O(n<sup>2</sup>). A slow sorting algorithm like selection sort.
-- 0(n!). A really slow algorithm like travelling salesperson.
+- 0(n!). A really slow algorithm like traveling salesperson.
 
 ## In Short
 
