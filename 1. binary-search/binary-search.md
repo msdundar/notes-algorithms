@@ -1,6 +1,6 @@
 ## Binary Search
 
-- Binary search is a divide-and-conquer algorithm; its input is a **sorted** list of elements. If an element you’re looking for is in that list, binary search returns the position **where it’s located**. Otherwise, binary search returns **null**.
+- Binary search is a divide-and-conquer algorithm; its input is a **sorted** list of elements. If an element you're looking for is in that list, binary search returns the position **where it's located**. Otherwise, binary search returns **null**.
 
 - We can only conduct binary search with ordered lists, such as alphabetically ordered phone list, ordered list of numbers etc.
 
