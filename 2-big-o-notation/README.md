@@ -27,7 +27,7 @@
 - We talk about how quickly the run time of an algorithm increases as the size of the input increases.
 - Run time of algorithms is expressed in Big O notation.
 
-## Pigeon and Internet Example
+# Pigeon and Internet Example
 
 ![pigeon-versus-internet](images/pigeon-versus-internet.png)
 

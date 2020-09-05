@@ -1,17 +1,17 @@
-## Divide and Conquer
+# Divide and Conquer
 
 - D&C algorithms are recursive algorithms. To solve a problem using D&C, there are two steps:
 
   1. Figure out the base case. This should be the simplest possible case.
   1. Divide or decrease your problem until it becomes the base case.
 
-### Question
+## Question
 
-- Elimizde 1680 x 640 metrelik bir tarla var. Bu tarlayı birbiriyle eşit karelere ayırmak istiyoruz. Aynı zamanda ise olabilecek en büyük kare alanlarını istiyoruz, yani tarlayı birbiriyle eş en az kaç kareye bölebiliriz bunu bulmak istiyoruz.
+- How many equal squares can you split a 1680x640 field, by using minimum number of squares? In other words, target for the maximum square size.
 
   ![dc-1](images/dc-1.png)
 
-- Stratejimizi hatırlayalım. Önce base case'i bulmalıyız. Bu base case olası en basit durum olmalı. Daha sonra problemi bu base case'i kullanarak daha küçük parçalara böleceğiz ve sonunda ulaştığımız durum bizim yeni base case'imiz olacak.
+- First we need to find the base case. The case has to be the simplest possible case. Then you'll have to divide the problem into multiple easier pieces by using the base case, in the end the situation we reach will be our new base case.
 
 - First, figure out the base case. The easiest case would be if one side was a multiple of the other side.
 

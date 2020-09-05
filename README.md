@@ -17,17 +17,18 @@ Each folder follows the chapter structure of the book, and includes:
 1. [Binary Search](/1-binary-search)
 2. [Big-o Notation](/2-big-o-notation)
 3. [Selection Sort](/3-selection-sort)
-4. [Arrays and Linked Lists]
-5. [Recursion]
-6. [Quicksort]
-7. [Hash Tables]
-8. [Breadth-first Search]
-9. [Dikstras Algorith]
-10. [Greedy Algorithms]
-11. [Dynamic Programming]
-12. [K-Nearest Neighbors]
-13. [Bellman-ford Algorithm]
-14. [Where to Go Next]
+4. [Arrays and Linked Lists](/4-arrays-and-linked-lists)
+5. [Recursion](/5-recursion)
+6. [Stack](/6-stack)
+7. [Quicksort]()
+8. [Hash Tables]()
+9. [Breadth-first Search]()
+10. [Dikstras Algorith]()
+11. [Greedy Algorithms]()
+12. [Dynamic Programming]()
+13. [K-Nearest Neighbors]()
+14. [Bellman-ford Algorithm]()
+15. [Where to Go Next]()
 
 ## Contributing
 

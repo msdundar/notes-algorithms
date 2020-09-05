@@ -1,4 +1,4 @@
-## Quicksort
+# Quicksort
 
 - When you get a new problem, you don't have to be stumped. Instead, you can ask, "Can I solve this if I use divide and conquer?"
 
@@ -22,12 +22,12 @@
 
 - This is called **partitioning**. Now you have:
 
-  - A sub-array of all the numbers less than the pivot
   - The pivot
+  - A sub-array of all the numbers less than the pivot
   - A sub-array of all the numbers greater than the pivot
 
 - The two sub-arrays aren't sorted. They're just partitioned. But if they were sorted, then sorting the whole array would be pretty easy. If the sub-arrays are sorted, then you can combine the whole thing like this— left array + pivot + right array —and you get a sorted array. How do you sort the sub-arrays? Well, the quicksort base case already knows how to sort arrays of two elements (the left sub-array) and empty arrays (the right sub-array).
 
 - What about an array of four elements?
 
-  ![quicksort-recursion](images/quicksort-recursion.png)
+  ![recursion](images/recursion.png)

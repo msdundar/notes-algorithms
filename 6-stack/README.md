@@ -1,4 +1,4 @@
-## Stack
+# Stack
 
 - You can think stack analogy of sticky notes!
 
@@ -36,7 +36,7 @@
 
   ![call-stack-4](images/call-stack-4.png)
 
-- Now the topmost box on the stack is for the __greet__ function, which means you returned back to the __greet__ function.
+- Now the topmost box on the stack is for the `greet` function, which means you returned back to the `greet` function.
 
 - When you called the `say_cheers` function, the `greet` function was partially completed. This is the big idea behind this section: **when you call a function from another function, the calling function is paused in a partially completed state**.
 
@@ -62,9 +62,9 @@
       return x * fact(x-1)
   ```
 
-![call-stack-example-1](images/call-stack-example-1.png)
+  ![call-stack-example-1](images/call-stack-example-1.png)
 
-![call-stack-example-2](images/call-stack-example-2.png)
+  ![call-stack-example-2](images/call-stack-example-2.png)
 
 - Using the stack is convenient, but there is a cost. Saving all that info can take up a lot of memory. Each of those function calls takes up some memory, and when your stack is too big, that means your computer is saving information for many function calls. **At this point you have two options**:
 
