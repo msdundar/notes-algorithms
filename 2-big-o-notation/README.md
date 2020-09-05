@@ -1,4 +1,4 @@
-## Big-o-notation
+# Big-o-notation
 
 - Big-o-notation is special notation that tells you how fast an algorithm is.
 
@@ -20,7 +20,7 @@
 - O(n<sup>2</sup>). A slow sorting algorithm like selection sort.
 - 0(n!). A really slow algorithm like traveling salesperson.
 
-## In Short
+## Summary
 
 - Algorithm speed isn't measured in seconds, but in growth of the number of operations.
 - It says how time scales with respect to some variables.
@@ -30,3 +30,13 @@
 ## Pigeon and Internet Example
 
 ![pigeon-versus-internet](images/pigeon-versus-internet.png)
+
+# Algorithm Analysis
+
+![example-1](images/example1.png)
+
+![example-2](images/example2.png)
+
+![example-3](images/example3.png)
+
+![example-4](images/example4.png)
