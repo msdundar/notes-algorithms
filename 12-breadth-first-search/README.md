@@ -1,4 +1,4 @@
-## Breadth First Search
+# Breadth First Search
 
 Breadth-first search allows you to find the shortest distance between two things. But shortest distance can mean a lot of things!
 
@@ -8,7 +8,7 @@ You can use breadth-first search to:
 - Write a spell checker (fewest edits from your misspelling to a real word—for example, READED -> READER is one edit).
 - Find the doctor closest to you in your network.
 
-### What is a Graph?
+## Graph
 
 ![simple-graph](images/simple-graph.png)
 
@@ -16,7 +16,13 @@ Alex owes Rama money, Tom owes Adit money, and so on. Each graph is made up of n
 
 ![node-edge](images/node-edge.png)
 
-### Breadth-first search
+## Tree
+
+![tree](images/tree.png)
+
+This is called a **tree**. A tree is a special type of graph, where no edges ever point back.
+
+## Breadth-first search
 
 It can help answer two types of questions:
 
@@ -114,12 +120,6 @@ You also keep a queue of every person to search. Adding one person to the queue 
 
 You could say that this list is sorted, in a way. If task A depends on task B, task A shows up later in the list. This is called a **topological sort**, and it's a way to make an ordered list out of a graph.
 
-## Tree
-
-![tree](images/tree.png)
-
-This is called a **tree**. A tree is a special type of graph, where no edges ever point back.
-
 ## Recap
 
 - Breadth-first search tells you if there's a path from A to B.
@@ -131,3 +131,52 @@ This is called a **tree**. A tree is a special type of graph, where no edges eve
 - Stacks are LIFO (Last In, First Out).
 - You need to check people in the order they were added to the search list, so the search list needs to be a queue. Otherwise, you won't get the shortest path.
 - Once you check someone, make sure you don't check them again. Otherwise, you might end up in an infinite loop.
+
+# Queues in Ruby
+
+- It is especially useful in threaded programming when information must be exchanged safely between multiple threads. The `Queue` class implements all the required locking semantics.
+
+- The `Queue` class is used to synchronize communication between threads. You would use this if you were doing something with concurrency.
+
+  ```ruby
+  require 'thread'
+  queue = Queue.new
+
+  producer = Thread.new do
+    5.times do |i|
+      sleep rand(i) # simulate expense
+      queue << i
+      puts "#{i} produced"
+    end
+  end
+
+  consumer = Thread.new do
+    5.times do |i|
+      value = queue.shift
+      sleep rand(i/2) # simulate expense
+      puts "consumed #{value}"
+    end
+  end
+  ```
+
+## Methods
+
+- `new`: creates a new queue
+- `<<`: same as push.
+- `clear`: remove all objects from queue.
+- `close`: closes the queue. a closed queue cannot be re-opened.
+- `closed?`: returns true if the queue is closed.
+- `empty?`: returns true if the queue is empty.
+- `length`: returns the size of the queue.
+- `num_waiting`: returns the number of objects waiting on the queue.
+- `push`: add an item to the end of the queue.
+- `shift`: remove the first object from queue.
+- `pop`: remove the last object from queue.
+- `size`: same as length.
+
+## Stack versus Queue
+
+Well, an array can be a stack or queue by limiting yourself to stack or queue methods (push, pop, shift, unshift).
+
+- Stack behavior: Using **push / pop** gives **LIFO (last in first out)** behavior (stack).
+- Queue behavior: Using **push / shift** gives **FIFO (first in first out)** behavior (queue).

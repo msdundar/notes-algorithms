@@ -1,6 +1,6 @@
 # Divide and Conquer
 
-- D&C algorithms are recursive algorithms. To solve a problem using D&C, there are two steps:
+D&C algorithms are recursive algorithms. To solve a problem using D&C, there are two steps:
 
   1. Figure out the base case. This should be the simplest possible case.
   1. Divide or decrease your problem until it becomes the base case.
@@ -27,4 +27,4 @@
 
 - "Why would I do this recursively if I can do it easily with a loop?" you may be thinking. Well, this is a sneak peek into functional programming!
 
-- Functional programming languages like Haskell don’t have loops, so you have to use recursion to write functions like this. If you have a good understanding of recursion, functional languages will be easier to learn.
+- Functional programming languages like Haskell don't have loops, so you have to use recursion to write functions like this. If you have a good understanding of recursion, functional languages will be easier to learn.

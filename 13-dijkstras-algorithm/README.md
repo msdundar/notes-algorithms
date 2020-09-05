@@ -1,4 +1,4 @@
-## Dijkstras Algorithm
+# Dijkstras Algorithm
 
 - Dijkstra's algorithm, lets you answer "What's the shortest path to X?" for weighted graphs.
 
@@ -11,7 +11,7 @@
   1. Find the cheapest node. This is the node you can get to in the least amount of time.
   2. Check whether there's a cheaper path to the neighbors of this node. If so, update their costs.
   3. Repeat until you've done this for every node in the graph.
-  4. Calculate the final path. (Coming up in the next section!)
+  4. Calculate the final path.
 
 - Dijkstra's algorithm, each edge in the graph has a number associated with it. These are called weights. A graph with weights is called a weighted graph. A graph without weights is called an unweighted graph.
 
@@ -95,11 +95,11 @@
 
 - Once you've processed all the nodes, the algorithm is over. I hope the walkthrough helped you understand the algorithm a little better. Finding the lowest-cost node is pretty easy with the `find_lowest_cost_node` function. Here it is in code:
 
-  ![find_lowest_cost_node](images/find_lowest_cost_node.png)
+  ![find_lowest_cost_node](images/find-lowest-cost-node.png)
 
 ## Recap
 
 - Breadth-first search is used to calculate the shortest path for an unweighted graph.
-- Dijkstra’s algorithm is used to calculate the shortest path for a weighted graph.
-- Dijkstra’s algorithm works when all the weights are positive.
+- Dijkstra's algorithm is used to calculate the shortest path for a weighted graph.
+- Dijkstra's algorithm works when all the weights are positive.
 - If you have negative weights, use the Bellman-Ford algorithm.

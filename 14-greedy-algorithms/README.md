@@ -1,16 +1,14 @@
-## Greedy Algorithms
+# Greedy Algorithms
 
 - Greedy algorithms are easy.
 
-- Greedy algorithm'in olayı, her adımda mümkün olan en optimum davranışı seçmek ve bu şekilde sonuca ulaşmaktır. Peki neden greedy, yani aç gözlü deniyor? Şu şekle bakalım:
+- Greedy algorithm always targets the most optimum behavior in each step. But why it's called greedy? Let's look at the example here:
 
   ![greedy-algorithms](images/greedy-algorithms.png)
 
-Bu şekilde bizden 'en büyük toplama' ulaşacağımız yolu bulmamız isteniyor. Greedy algorithm'i takip edersek ilk iterasyonda seçeceğimiz rakam 7 olacak. Daha sonra ikinci iterasyonda seçeceğimiz rakam ise 11 olacak. Dolayısıyla toplam 3 + 7 + 11 = 21 olacak. Oysa ki ilk başta 4, daha sonra ise 20 seçseydik toplam 3 + 4 + 20 = 27 olacaktı. Ancak biz açgözlülük yapıp ilk gördüğümüz büyük sayıya atladık. Bu yüzden bu algoritmanın adı 'greedy'.
+In this image, we were asked to find the biggest possible sum. If you imitate the greedy algorithm, you would be choosing 7 in the first iteration, and then you would be choosing 11. Finally, the sum would be 3+7+11=21. However, if you've chosen 4 in the first iteration, and then 20, the sum would be 27. Being greedy in the first step didn't help us in this example.
 
-Greedy algoritmalarla ilgili ikinci önemli konu ise her bir adımda yeni bir karar vermek durumunda olmamız. Her bir iterasyonda, yani adımda bir karar daha verip, büyük sayıyı seçiyoruz.
-
-### The classroom scheduling problem
+## The classroom scheduling problem
 
 - Suppose you have a classroom and want to hold as many classes here as possible. You get a list of classes.
 
@@ -23,7 +21,7 @@ Greedy algoritmalarla ilgili ikinci önemli konu ise her bir adımda yeni bir ka
   1. Pick the class that ends the soonest.  This is the first class you'll hold in this classroom.
   2. Now, you have to pick a class that starts after the first class. Again, pick the class that ends the soonest. This is the second class you'll hold.
 
-### The knapsack problem
+## The knapsack problem
 
 - Suppose you're a greedy thief. You're in a store with a knapsack, and there are all these items you can steal. But you can only take what you can fit in your knapsack. The knapsack can hold 35 pounds.
 
@@ -34,13 +32,13 @@ Greedy algoritmalarla ilgili ikinci önemli konu ise her bir adımda yeni bir ka
 
 ![knapsack](images/knapsack.png)
 
-Your knapsack can hold 35 pounds of items.  The stereo system is the most expensive, so you steal that. Now you don't have space for anything else. You got $3,000 worth of goods. But wait! If you'd picked the laptop and the guitar instead, you could have had $3,500 worth of loot!
+Your knapsack can hold 35 pounds of items. The stereo system is the most expensive, so you steal that. Now you don't have space for anything else. You got $3,000 worth of goods. But wait! If you'd picked the laptop and the guitar instead, you could have had $3,500 worth of loot!
 
 Clearly, the greedy strategy doesn't give you the optimal solution here. But it gets you pretty close. In the next chapter, I'll explain how to calculate the correct solution. But if you're a thief in a shopping center, you don't care about perfect. “Pretty good” is good enough.
 
 Here's the takeaway from this second example: sometimes, perfect is the enemy of good. Sometimes all you need is an algorithm that solves the problem pretty well. And that's where greedy algorithms shine, because they're simple to write and usually get pretty close.
 
-### The set-covering problem
+## The set-covering problem
 
 - This is an example where greedy algorithms are absolutely necessary.
 
@@ -57,9 +55,9 @@ How do you  gure out the smallest set of stations you can play on to cover all 5
 
 2. From these, pick the set with the smallest number of stations that covers all 50 states.
 
-The problem is, it takes a long time to calculate every possible subset of stations. It takes `O(2^n)` time, because there are 2^n stations. It's possible to do if you have a small set of 5 to 10 stations. But with all the examples here, think about what will happen if you have 100 items. Suppose you can calculate 10 subsets per second. There's no algorithm that solves it fast enough! What can you do?
+The problem is, it takes a long time to calculate every possible subset of stations. It takes `O(2^n)` time, because there are `2^n` stations. It's possible to do if you have a small set of 5 to 10 stations. But with all the examples here, think about what will happen if you have 100 items. Suppose you can calculate 10 subsets per second. There's no algorithm that solves it fast enough! What can you do?
 
-### Approximation algorithms
+## Approximation algorithms
 
 Greedy algorithms to the rescue! Here's a greedy algorithm that comes pretty close:
 
@@ -75,7 +73,7 @@ Greedy algorithms are a good choice because not only are they simple to come up 
 
 In Python, sets are like lists, except sets can't have duplicates.
 
-### Exercises
+## Exercises
 
 For each of these algorithms, say whether it's a greedy algorithm or not.
 
@@ -83,7 +81,7 @@ For each of these algorithms, say whether it's a greedy algorithm or not.
 - Breadth-first search: Yes.
 - Dijkstra's algorithm: Yes.
 
-### NP-complete problems
+## NP-complete problems
 
 To sole the set-covering problem, you had to calculate every possible set.
 
@@ -93,7 +91,7 @@ It's 5! = 120. Suppose you have 10 cities. How many possible routes are there? 1
 
 The traveling-salesperson problem and the set-covering problem both have something in common: you calculate every possible solution and pick the smallest/shortest one. Both of these problems are NP-complete.
 
-#### Approximating
+## Approximating
 
 What's a good approximation algorithm for the traveling salesperson? Something simple that finds a short path. See if you can come up with an answer before reading on. Here's how I would do it: arbitrarily pick a start city. Then, each time the salesperson has to pick the next city to visit, they pick the closest unvisited city. Suppose they start in Marin.
 
@@ -113,7 +111,7 @@ The short answer: **there's no easy way to tell if the problem you're working on
 - If your problem involves a set (like a set of radio stations) and it's hard to solve, it might be NP-complete.
 - Can you restate your problem as the set-covering problem or the traveling-salesperson problem? Then your problem is definitely NP-complete.
 
-### Excercises
+## Excercises
 
 - A postman needs to deliver to 20 homes. He needs to find the shortest route that goes to all 20 homes. Is this an NP-complete problem?
   - YES
@@ -124,7 +122,7 @@ The short answer: **there's no easy way to tell if the problem you're working on
 - You're making a map of the USA, and you need to color adjacent states with different colors. You have to find the minimum number of colors you need so that no two adjacent states are the same color. Is this an NP-complete problem?
   - YES
 
-### Recap
+## Recap
 
 - Greedy algorithms optimize locally, hoping to end up with a global optimum.
 - NP-complete problems have no known fast solution.
