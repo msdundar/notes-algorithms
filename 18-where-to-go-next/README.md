@@ -22,7 +22,7 @@ A binary search tree is **a lot faster** for insertions and deletions on average
 | Insert | O(n)    | O(logn)            |
 | Delete | O(n)    | O(logn)            |
 
-Binary search trees have some **downsides* too: for one thing, **you don't get random access**. You can't say, "Give me the fifth element of this tree." Those performance times are also on average and rely on the tree being balanced. Suppose you have an imbalanced tree like the one shown next.
+Binary search trees have some **downsides** too: for one thing, **you don't get random access**. You can't say, "Give me the fifth element of this tree". Those performance times are also on average and rely on the tree being balanced. Suppose you have an imbalanced tree like the one shown next.
 
 ![inbalanced-tree](images/inbalanced-tree.png)
 
@@ -89,7 +89,7 @@ arr1 = [1, 2, 3, 4, 5]
 reduce(lambda x, y: x+y, arr1)
 ```
 
-## Bloom Filters and HyperLogLog
+## Bloom Filters
 
 Bloom filters are **probabilistic** data structures. They give you an answer that **could be wrong but is probably correct**. Instead of a hash, you can ask your bloom filter if you've crawled an URL before. A hash table would give you an accurate answer. A bloom filter will give you an answer that's **probably correct**:
 
@@ -100,7 +100,7 @@ Bloom filters are great because they take up very little space. A hash table wou
 
 ## Comparing files
 
-SHA is a **hash function**. It generates a hash, which is just a short string. The hash function for **hash tables went from **string to array** index, whereas **SHA goes from string to string**. SHA generates a different hash for every string.
+SHA is a **hash function**. It generates a hash, which is just a short string. The hash function for hash tables goes from **string to array** index, whereas **SHA goes from string to string**. SHA generates a different hash for every string.
 
 You can use SHA to tell whether two files are the same. This is useful when you have very large files. Suppose you have a 4 GB file. You want to check whether your friend has the same large file. You don't have to try to email them your large file. Instead, you can both calculate the SHA hash and compare it.
 
@@ -130,4 +130,4 @@ Diffie-Hellman has two keys: a public key and a private key. The public key is e
 
 ## Linear programming
 
-Linear programming is used to maximize something given some constraints. Linear programming uses the Simplex algorithm. It's a complex algorithm, which is why I didn't include it in this book. If you're interested in optimization, look up linear programming!
+Linear programming is used to maximize something given some constraints. Linear programming uses the Simplex algorithm. It's a complex algorithm, which is why it's not included here.

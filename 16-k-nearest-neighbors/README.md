@@ -50,7 +50,7 @@ When you're working with KNN, it's really important to pick the **right features
 - Features that directly correlate to the movies you're trying to recommend
 - Features that don't have a bias (for example, if you ask the users to only rate comedy movies, that doesn't tell you whether they like action movies)
 
-## Excersice
+## Exercice
 
 **Question:** Netflix has millions of users. The earlier example looked at the five closest neighbors for building the recommendations system. Is this too low? Too high?
 

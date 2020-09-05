@@ -43,17 +43,17 @@ Adding or removing from a linked list is much more easier, since each item only 
 
 - **Random access** means you can jump directly to the 10th element. Arrays provide random access, therefore they are faster at reading.
 
-## Excersise
+## Exercise
 
 - Facebook uses neither an array nor a linked list to store user information. Let's consider a hybrid data structure: an array of linked lists. You have an array with 26 slots. Each slot points to a linked list. For example, the first slot in the array points to a linked list containing all the usernames starting with a. The second slot points to a linked list containing all the usernames starting with b, and so on.
 
-  ![facebook-excersise](images/facebook-excercise.png)
+  ![facebook-exercise](images/facebook-exercise.png)
 
 - Question: Suppose Adit B signs up for Facebook, and you want to add them to the list. You go to slot 1 in the array, go to the linked list for slot 1, and add Adit B at the end. Now, suppose you want to search for Zakhir H. You go to slot 26, which points to a linked list of all the Z names. Then you search through that list to find Zakhir H. Compare this hybrid data structure to arrays and linked lists. Is it slower or faster than each for searching and inserting? You don't have to give Big O run times, just whether the new data structure would be faster or slower.
 
 - Answer: Searching—slower than arrays, faster than linked lists. Inserting—faster than arrays, same amount of time as linked lists. So it's slower for searching than an array, but faster or the same as linked lists for everything.
 
-## Gotcha
+## Summary
 
 - When accessing to the first element, the speed of array and linked list is the same since we don't need to follow all the pointers between linked-list items. However, for any other item, array is gonna be faster.
 - When we create an array, the computer allocates a memory block, it doesn't for linked-list.

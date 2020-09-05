@@ -38,6 +38,7 @@ Even if you partition the array differently, you're still touching O(n) elements
 In this example, there are `O(log n)` levels (the technical way to say that is, "The height of the call stack is `O(log n)`"), and each level takes `O(n)` time. The entire algorithm will take `O(n) * O(log n) = O(n log n)` time. This is the best-case scenario. In the worst case, there are `O(n)` levels, so the algorithm will take O(n) * O(n) = O(n<sup>2</sup>) time.
 
 Quicksort is one of the fastest sorting algorithms out here and it's a very good example of D&C.
+
 ## Recap
 
 - D&C works by breaking a problem down into smaller and smaller pieces. If you're using D&C on a list, the base case is probably an empty array or an array with one element.
