@@ -19,16 +19,14 @@ func main() {
     guess := (min + max) / 2
 
     if guess == randNumber {
-      fmt.Printf("Congrats! You found the correct number in %v tries\n", tries)
+      fmt.Printf("The number have been found in %v tries and it was %v\n", tries, randNumber)
       break
     } else if guess > randNumber {
       tries++
       max = guess - 1
-      fmt.Printf("Choose a smaller number than %v. The number must be between %v and %v\n", guess, min, max)
     } else if guess < randNumber {
       tries++
       min = guess + 1
-      fmt.Printf("Choose a bigger number than %v. The number must be between %v and %v\n", guess, min, max)
     }
   }
 }

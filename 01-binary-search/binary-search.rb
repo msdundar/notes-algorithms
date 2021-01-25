@@ -10,7 +10,7 @@ def binary_search(array, item)
     guess = array[middle]
 
     if guess == item
-      return middle
+      return item
     elsif guess > item
       maximum = middle - 1
     else
